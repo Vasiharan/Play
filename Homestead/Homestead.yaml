@@ -1,0 +1,24 @@
+---
+ip: "192.168.10.10"
+memory: 2048
+cpus: 1
+
+authorize: SSHKey/vasiSSHKey.pub
+
+keys:
+    - SSHKey/vasiSSHKey
+
+folders:
+    - map: ~/Dev/Code
+      to: /home/vagrant/Code
+
+sites:
+    - map: play.app
+      to: /home/vagrant/Code/Laravel/play/public
+
+databases:
+    - homestead
+
+variables:
+    - key: APP_ENV
+      value: local
